@@ -72,18 +72,18 @@ app.post("/", function (req, res) {
   res.redirect("/");
 });
 
-app.post("/delete", function (req, res) {
-  const deleteName = req.body.checkbox;
+// app.post("/delete", function (req, res) {
+//   const deleteName = req.body.checkbox;
 
-  Item.deleteOne({ name: deleteName }, function (err) {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log(deleteName);
-      res.redirect("/");
-    }
-  });
-});
+//   Item.deleteOne({ name: deleteName }, function (err) {
+//     if (err) {
+//       console.log(err);
+//     } else {
+//       console.log(deleteName);
+//       res.redirect("/");
+//     }
+//   });
+// });
 
 app.get("/work", function (req, res) {
   res.render("list", { listTitle: "Work List", newListItems: workItems });
